@@ -1,3 +1,30 @@
+@font-face {
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: local("Myriad Pro Light"),
+       url("../fonts/museosanscyrl_1.otf") format("otf")
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: local("Myriad Pro Regular"),
+       url("../fonts/museosanscyrl_2.otf") format("otf")
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local("Myriad Pro Bold"),
+       url("../fonts/museosanscyrl_3.otf") format("otf")
+}
+
 html {
   box-sizing: border-box;
 }
@@ -8,19 +35,16 @@ html {
   box-sizing: inherit;
 }
 
-/*
 body {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "Myriad Pro", "Arial", sans-serif;
   font-size: 14px;
   font-style: normal;
   line-height: 24px;
-  color: @blue-dark;
-  min-width: 320px;
+  color: black;
+
   padding: 0;
   margin: 0;
-  background-color: @gray-light;
 }
-*/
 
 img {
   max-width: 100%;
@@ -71,7 +95,8 @@ img {
   margin-bottom: 15px;
 
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 700;
+  color: #282828;
 }
 
 .sent-modal__text {
@@ -81,7 +106,7 @@ img {
   margin: 0;
 
   font-size: 30px;
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .sent-modal__close-button {
