@@ -64,7 +64,7 @@ img {
   overflow: hidden;
 }
 
-/* ====== Модальное окно "Заказ принят" ====== */
+/* ====== Модальное окно "Заказ принят" - начало ====== */
 .sent-modal {
   position: relative;
   /*
@@ -125,6 +125,10 @@ img {
 
 .sent-modal__close-button:hover {
   cursor: pointer;
+}
+
+.sent-modal__close-button:active {
+  opacity: 0.5;
 }
 
 .sent-modal__close-button::before,
@@ -193,3 +197,4 @@ img {
   right: 0;
   bottom: 0;
 }
+/* ====== Модальное окно "Заказ принят" - конец ====== */
