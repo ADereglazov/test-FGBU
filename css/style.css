@@ -1,0 +1,170 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  color: @blue-dark;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  background-color: @gray-light;
+}
+*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ====== Модальное окно "Заказ принят" ====== */
+.sent-modal {
+  position: relative;
+  /*
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  */
+
+  display: block;
+  width: 523px;
+  min-height: 335px;
+  padding: 20px;
+
+  border-radius: 45px;
+  text-align: center;
+  background-color: #fefbfa;
+  border: 1px solid #fbeeef;
+
+  overflow: hidden;
+}
+
+.sent-modal__title {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.sent-modal__text {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.sent-modal__close-button {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+
+  border: none;
+  background: none;
+}
+
+.sent-modal__close-button:hover {
+  cursor: pointer;
+}
+
+.sent-modal__close-button::before,
+.sent-modal__close-button::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -2px;
+
+  display: block;
+  width: 16px;
+  height: 2px;
+
+  background-color: hsl(0, 0%, 50%);
+}
+
+.sent-modal__close-button::before {
+  transform: rotate(45deg);
+}
+
+.sent-modal__close-button::after {
+  transform: rotate(-45deg);
+}
+
+.sent-modal__round-ok {
+  position: relative;
+
+  width: 90px;
+  height: 90px;
+  margin: 57px auto 30px;
+
+  border: 4px solid #ee868d;
+  border-radius: 50%;
+}
+
+.sent-modal__round-ok::before,
+.sent-modal__round-ok::after {
+  content: '';
+  position: absolute;
+
+  display: block;
+  height: 5px;
+
+  border-radius: 4px;
+  background-color: #ee868d;
+}
+
+.sent-modal__round-ok::before {
+  width: 14px;
+
+  top: 42px;
+  left: 28px;
+  transform: rotate(45deg);
+}
+
+.sent-modal__round-ok::after {
+  width: 25px;
+
+  top: 38px;
+  left: 33px;
+  transform: rotate(-45deg);
+}
+
+.sent-modal__leafs {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

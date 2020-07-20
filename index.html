@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Главная страница</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/appetite_new.otf" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/museosanscyrl.otf" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/museosanscyrl_0.otf" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/museosanscyrl_1.otf" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/museosanscyrl_2.otf" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/museosanscyrl_3.otf" as="font" crossorigin="anonymous">
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header__info contact-info">
+      <img class="contact-info__logo" src="img/logo.png" width="280" height="126" alt="Лого студии Pincet">
+      <p class="contact-info__description">Студия депиляции и массажный кабинет в Бресте</p>
+      <img class="contact-info__map" src="img/icon-map.png" width="192" height="133" alt="Иконка карты">
+      <div class="contact-info__location">
+        <b class="contact-info__title">Мы находимся в центре:</b>
+        <address class="contact-info__address">г. Брест, ул. Гоголя, д.65</address>
+        <a class="contact-info__map-link" href="#">Смотреть на карте</a>
+      </div>
+      <div class="contact-info__details">
+        <div class="contact-info__call">
+          <i  class="contact-info__title">Звоните, мы сейчас работаем</i>
+          <a  class="contact-info__phone" href="tel:+375333822499">+375 33 382 24 99</a>
+        </div>
+        <span class="contact-info__schedule">Пн-Вс 9:00-21:00</span>
+      </div>
+      <a class="contact-info__sign-up" href="#">Записаться онлайн</a>
+    </div>
+    <nav class="page-header__nav main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Шугаринг и депиляция воском</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Антицеллюлитный массаж</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Классический массаж</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Обучение</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Косметика для мастеров</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Статьи</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">О студии</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">Студия депиляции и массажный кабинет в Бресте</h1>
+    <section class="services-list">
+      <h2 class="visually-hidden">Виды наших услуг</h2>
+      <div class="services-list__description">
+        <p class="services-list__title">Хотите избавиться от нежелательных волос или нужен сеанс антицеллюлитного массажа?</p>
+        <ul class="services-list__list">
+          <li class="services-list__item">депиляция воском и Шугаринг;</li>
+          <li class="services-list__item">профессиональные сертифицированные мастера;</li>
+          <li class="services-list__item">работаем и с женщинами, и с мужчинами;</li>
+          <li class="services-list__item">результат уже после первой процедуры.</li>
+        </ul>
+        <a class="services-list__link" href="#">Получить карту клиента бесплатно</a>
+      </div>
+      <img class="services-list__img-card" src="img/card-client.png" width="176" height="236" alt="Карта клиента">
+      <img class="services-list__img-info" src="img/icon-info.png" width="74" height="74" alt="Информация">
+      <p class="services-list__img-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <img class="services-list__img-girl" src="img/girl.png" width="868" height="760" alt="Девушка">
+    </section>
+  </main>
+  <!-------------------------- Модальное окно для заполнения формы --------------------------------->
+  <section class="form-modal">
+    <h2 class="form-modal__title"><b>Получите</b> программу обучения</h2>
+    <button class="form-modal__close-button" type="button"></button>
+    <p class="form-modal__text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <div class="form-modal__wrapper">
+      <select class="form-modal__select" name="type-of-learning" id="type-of-learning-field">
+        <option class="form-modal__option" selected>Повышение квалификации</option>
+        <option class="form-modal__option">Новичёк</option>
+      </select>
+      <label class="form-modal__select-label visually-hidden" for="type-of-learning-field"></label>
+    </div>
+    <div class="form-modal__wrapper">
+      <input class="form-modal__input" type="text" name="name" id="name-field" placeholder="Ваше имя">
+      <label class="form-modal__label visually-hidden" for="name-field"></label>
+    </div>
+    <div class="form-modal__wrapper">
+      <input class="form-modal__input" type="text" name="phone" id="phone-field" placeholder="Ваш номер телефона">
+      <label class="form-modal__label visually-hidden" for="phone-field"></label>
+    </div>
+    <button class="form-modal__button" type="submit" name="submit-button">Получить программу</button>
+    <img src="img/lern-program.png" width="263" height="386" alt="Программа обучения">
+  </section>
+  <!-------------------------- Модальное окно об успешном принятии заказа --------------------------------->
+  <section class="sent-modal">
+    <button class="sent-modal__close-button" type="button"></button>
+    <div class="sent-modal__round-ok"></div>
+    <h2 class="sent-modal__title">Ваш заказ принят.</h2>
+    <p class="sent-modal__text">Ожидайте звонка заказ принят заказ принят заказ принят заказ принят заказ принят заказ принят заказ принят заказ принят заказ принят</p>
+    <img class="sent-modal__leafs" src="img/leafs.png" width="93" height="180" alt="Листья">
+  </section>
+</body>
+</html>
