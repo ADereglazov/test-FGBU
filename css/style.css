@@ -321,12 +321,143 @@ img {
   cursor: pointer;
 }
 
-.main-nav__link:active {
+.main-nav__link[href]:active {
   opacity: 0.5;
 }
 /* =========== Header - конец ============ */
 
+.services-list {
+  position: relative;
 
+  min-height: 885px;
+}
+
+.services-list__img-info,
+.services-list__img-text {
+  display: none;
+}
+
+.services-list__description {
+  width: 785px;
+  padding: 110px 10px 10px 100px;
+}
+
+.services-list__title {
+  font-size: 48px;
+  line-height: 55px;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.services-list__title span{
+  font-weight: 500;
+}
+
+.services-list__img-card {
+  position: absolute;
+  bottom: 285px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
+  width: 176px;
+  height: 236px;
+}
+
+.services-list__list {
+  width: 590px;
+  margin: 0 0 55px 0;
+  padding: 0;
+
+  list-style: none;
+
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.services-list__item {
+  position: relative;
+  padding-left: 40px;
+}
+.services-list__item + .services-list__item {
+  margin-top: 22px;
+}
+
+.services-list__item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.services-list__item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background-color: #ef9499;
+}
+
+.services-list__wrapper-button {
+  position: relative;
+
+  width: 490px;
+}
+
+.services-list__link {
+  display: block;
+  width: 380px;
+  min-height: 85px;
+  padding: 20px 155px 20px 45px;
+
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: none;
+  border-radius: 40px;
+  background-image: linear-gradient(to bottom, #f9b5b6, #f1969a);
+  box-shadow: 0 5px 0 #d7747a;
+}
+
+.services-list__link:active {
+  box-shadow: inset 0 5px 0 #d7747a;
+}
+
+.services-list__img-branch {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.services-list__img-girl {
+  position: absolute;
+  right: -180px;
+  bottom: 100px;
+
+  display: block;
+  width: 868px;
+  height: 760px;
+}
 
 /* ====== Модальное окно "Форма заказа" - начало ====== */
 .form-modal {
