@@ -1,6 +1,7 @@
 var signButton = document.querySelector('.contact-info__sign-up');
+var getCardButton = document.querySelector('.services-list__link');
 
-if (signButton) {
+if (signButton && getCardButton) {
     var formModal = document.querySelector('.form-modal');
     var formModalCloseButton = formModal.querySelector('.form-modal__close-button');
     var formModalButton = formModal.querySelector('.form-modal__button');
@@ -9,6 +10,11 @@ if (signButton) {
     var sentModalCloseButton = sentModal.querySelector('.sent-modal__close-button');
 
     signButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        formModal.classList.remove('form-modal--hide');
+    });
+
+    getCardButton.addEventListener('click', function (evt) {
         evt.preventDefault();
         formModal.classList.remove('form-modal--hide');
     });

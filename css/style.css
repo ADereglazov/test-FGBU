@@ -590,6 +590,8 @@ img {
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
+
+  pointer-events: none;
 }
 
 .services-list__img-girl {
