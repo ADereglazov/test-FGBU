@@ -87,14 +87,14 @@
     <h2 class="form-modal__title"><b>Получите</b> программу обучения</h2>
     <button class="form-modal__close-button" type="button"></button>
     <p class="form-modal__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
-    <div class="form-modal__wrapper">
+    <div class="form-modal__wrapper form-modal__wrapper--select">
       <select class="form-modal__select" name="type-of-learning" id="type-of-learning-field">
         <option class="form-modal__option" selected>Повышение квалификации</option>
         <option class="form-modal__option">Новичёк</option>
       </select>
-      <label class="form-modal__select-label visually-hidden" for="type-of-learning-field"></label>
+      <label class="form-modal__label visually-hidden" for="type-of-learning-field"></label>
     </div>
     <div class="form-modal__wrapper">
       <input class="form-modal__input" type="text" name="name" id="name-field" placeholder="Ваше имя">
@@ -104,8 +104,11 @@
       <input class="form-modal__input" type="text" name="phone" id="phone-field" placeholder="Ваш номер телефона">
       <label class="form-modal__label visually-hidden" for="phone-field"></label>
     </div>
-    <button class="form-modal__button" type="submit" name="submit-button">Получить программу</button>
-    <img src="img/lern-program.png" width="263" height="386" alt="Программа обучения">
+    <div class="form-modal__wrapper-button">
+      <button class="form-modal__button" type="submit" name="submit-button"><span>Получить программу</span></button>
+      <img class="form-modal__img-plant" src="img/plant.png" width="144" height="55" alt="Цветок">
+    </div>
+    <img class="form-modal__img-lern" src="img/lern-program.png" width="263" height="386" alt="Программа обучения">
   </section>
   <!-------------------------- Модальное окно об успешном принятии заказа --------------------------------->
   <section class="sent-modal">

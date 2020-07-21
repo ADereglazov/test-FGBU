@@ -64,6 +64,230 @@ img {
   overflow: hidden;
 }
 
+/* ====== Модальное окно "Форма заказа" - начало ====== */
+.form-modal {
+  position: relative;
+  /*
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  */
+
+  display: block;
+  width: 738px;
+  min-height: 668px;
+  padding: 75px 105px 80px;
+
+  text-align: center;
+  color: #282828;
+
+  background-image: linear-gradient(to top right, #fcfdfd, #fdf3ee);
+  border: 1px solid #fbeeef;
+  border-radius: 45px;
+}
+
+.form-modal__close-button {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+
+  border: none;
+  background: none;
+}
+
+.form-modal__close-button:hover {
+  cursor: pointer;
+}
+
+.form-modal__close-button:active {
+  opacity: 0.5;
+}
+
+.form-modal__close-button::before,
+.form-modal__close-button::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -2px;
+
+  display: block;
+  width: 16px;
+  height: 2px;
+
+  background-color: hsl(0, 0%, 50%);
+}
+
+.form-modal__close-button::before {
+  transform: rotate(45deg);
+}
+
+.form-modal__close-button::after {
+  transform: rotate(-45deg);
+}
+
+.form-modal__title {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 30px;
+
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.form-modal__title b {
+  font-weight: 500;
+
+}
+
+.form-modal__text {
+  position: relative;
+  z-index: 1;
+
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.form-modal__wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.form-modal__wrapper + .form-modal__wrapper {
+  margin-top: 16px;
+}
+
+.form-modal__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-modal__wrapper--select::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 65px;
+  transform: rotate(40deg);
+  z-index: 1;
+
+  display: block;
+  width: 10px;
+  height: 2px;
+
+  background-color: #989797;
+
+  pointer-events: none;
+}
+
+.form-modal__wrapper--select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 58px;
+  transform: rotate(-40deg);
+  z-index: 1;
+
+  display: block;
+  width: 10px;
+  height: 2px;
+
+  background-color: #989797;
+
+  pointer-events: none;
+}
+
+.form-modal__select:hover {
+  cursor: pointer;
+}
+
+.form-modal__select,
+.form-modal__input {
+  width: 500px;
+  height: 80px;
+  padding: 30px 45px;
+
+  font-size: 18px;
+  font-weight: 300;
+  color: #989797;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 40px;
+}
+
+.form-modal__input::-webkit-input-placeholder,
+.form-modal__input::-moz-placeholder,
+.form-modal__input:-moz-placeholder,
+.form-modal__input:-ms-input-placeholder {
+  color: #989797;
+}
+
+.form-modal__wrapper-button {
+  position: relative;
+
+  margin-top: 16px;
+}
+
+.form-modal__button {
+  width: 500px;
+  min-height: 80px;
+  padding: 30px 45px;
+
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 40px;
+  background-image: linear-gradient(to bottom, #f8b3b4, #f1969b);
+  box-shadow: 0 7px 14px rgba(241, 131, 131, 0.57);
+}
+
+.form-modal__button:hover {
+  cursor: pointer;
+}
+
+.form-modal__button:active {
+  box-shadow: 0 0 14px rgba(241, 131, 131, 0.57);
+}
+
+.form-modal__button span{
+  position: relative;
+  z-index: 2;
+}
+
+.form-modal__img-plant {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 144px;
+  height: 55px;
+
+  pointer-events: none;
+}
+
+.form-modal__img-lern {
+  position: absolute;
+  top: 50%;
+  left: -110px;
+  transform: translateY(-50%);
+}
+
+.form-modal__img-lern {
+  position: absolute;
+}
+/* ====== Модальное окно "Форма заказа" - конец ====== */
+
 /* ====== Модальное окно "Заказ принят" - начало ====== */
 .sent-modal {
   position: relative;
@@ -79,34 +303,14 @@ img {
   min-height: 335px;
   padding: 20px;
 
-  border-radius: 45px;
   text-align: center;
-  background-color: #fefbfa;
+  color: #282828;
+
+  background-image: linear-gradient(to top right, #fcfaf9, #fbf5f2);
   border: 1px solid #fbeeef;
+  border-radius: 45px;
 
   overflow: hidden;
-}
-
-.sent-modal__title {
-  position: relative;
-  z-index: 1;
-
-  margin-top: 0;
-  margin-bottom: 15px;
-
-  font-size: 30px;
-  font-weight: 700;
-  color: #282828;
-}
-
-.sent-modal__text {
-  position: relative;
-  z-index: 1;
-
-  margin: 0;
-
-  font-size: 30px;
-  font-weight: 300;
 }
 
 .sent-modal__close-button {
@@ -151,6 +355,27 @@ img {
 
 .sent-modal__close-button::after {
   transform: rotate(-45deg);
+}
+
+.sent-modal__title {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.sent-modal__text {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 300;
 }
 
 .sent-modal__round-ok {
