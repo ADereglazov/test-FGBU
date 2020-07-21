@@ -1,29 +1,29 @@
 /* ============ Глобальные параметры - начало ============ */
 @font-face {
-  font-family: "Myriad Pro";
+  font-family: 'Myriad Pro';
   font-style: normal;
   font-display: swap;
   font-weight: 300;
-  src: local("Myriad Pro Light"),
-       url("../fonts/museosanscyrl_1.otf") format("otf")
+  src: local('Myriad Pro Light'),
+       url('../fonts/museosanscyrl_1.otf') format('otf')
 }
 
 @font-face {
-  font-family: "Myriad Pro";
+  font-family: 'Myriad Pro';
   font-style: normal;
   font-display: swap;
   font-weight: 500;
-  src: local("Myriad Pro Regular"),
-       url("../fonts/museosanscyrl_2.otf") format("otf")
+  src: local('Myriad Pro Regular'),
+       url('../fonts/museosanscyrl_2.otf') format('otf')
 }
 
 @font-face {
-  font-family: "Myriad Pro";
+  font-family: 'Myriad Pro';
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: local("Myriad Pro Bold"),
-       url("../fonts/museosanscyrl_3.otf") format("otf")
+  src: local('Myriad Pro Bold'),
+       url('../fonts/museosanscyrl_3.otf') format('otf')
 }
 
 html {
@@ -37,7 +37,7 @@ html {
 }
 
 body {
-  font-family: "Myriad Pro", "Arial", sans-serif;
+  font-family: 'Myriad Pro', 'Arial', sans-serif;
   font-size: 14px;
   font-style: normal;
   line-height: 20px;
@@ -46,7 +46,7 @@ body {
   padding: 0;
   margin: 0;
 
-  background-color: tomato;
+  background-color: #ffffff;
 }
 
 img {
@@ -78,8 +78,12 @@ img {
 
 /* =========== Header - начало ============ */
 .page-header {
+  position: relative;
+  z-index: 1;
+
   padding-top: 32px;
   min-height: 240px;
+  margin-bottom: -240px;
 }
 .page-header__info {
   margin-bottom: 15px;
@@ -167,7 +171,7 @@ img {
   height: 35px;
 
   border-radius: 50%;
-  background: #ffffff url("../img/icon-phone.png") no-repeat center;
+  background: #ffffff url('../img/icon-phone.png') no-repeat center;
 }
 
 .contact-info__call-text {
@@ -225,7 +229,7 @@ img {
   height: 35px;
 
   border-radius: 50%;
-  background: #ffffff url("../img/icon-time.png") no-repeat center;
+  background: #ffffff url('../img/icon-time.png') no-repeat center;
 }
 
 .contact-info__schedule b {
@@ -271,7 +275,7 @@ img {
   height: 35px;
 
   border-radius: 50%;
-  background: #ffffff url("../img/icon-calendar.png") no-repeat center;
+  background: #ffffff url('../img/icon-calendar.png') no-repeat center;
 }
 
 .main-nav__list {
@@ -325,19 +329,23 @@ img {
   opacity: 0.5;
 }
 /* =========== Header - конец ============ */
+.page-main__services-list {
+  padding-top: 240px;
+}
 
 .services-list {
   position: relative;
 
-  min-height: 885px;
-}
+  min-height: 1125px;
 
-.services-list__img-info,
-.services-list__img-text {
-  display: none;
+  background: url('../img/bg-main.png') no-repeat top center;
+  background-size: 100% auto;
 }
 
 .services-list__description {
+  position: relative;
+  z-index: 1;
+
   width: 785px;
   padding: 110px 10px 10px 100px;
 }
@@ -362,6 +370,105 @@ img {
   display: block;
   width: 176px;
   height: 236px;
+}
+
+.services-list__img-info {
+  position: absolute;
+  bottom: 265px;
+  left: 53%;
+  z-index: 2;
+
+  display: block;
+  width: 74px;
+  height: 74px;
+
+  animation: radial-pulse 2s infinite;
+}
+
+.services-list__img-info:hover {
+  cursor: pointer;
+}
+
+.services-list__img-info:hover + .services-list__info {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes radial-pulse {
+  0% {
+    width: 74px;
+    height: 74px;
+  }
+
+  50% {
+    width: 80px;
+    height: 80px;
+  }
+
+  100% {
+    width: 74px;
+    height: 74px;
+  }
+}
+
+.services-list__info {
+  position: relative;
+  left: 56%;
+  bottom: 320px;
+  z-index: 1;
+
+  width: 175px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 1s;
+}
+
+.services-list__info::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  z-index: 2;
+
+  display: block;
+  width: 175px;
+  height: 32px;
+
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.services-list__info-bg {
+  position: absolute;
+  top: -30px;
+  left: 15px;
+
+  display: block;
+  width: 175px;
+  height: auto;
+}
+
+.services-list__info-text-wrapper {
+  position: relative;
+
+  width: 175px;
+  height: 195px;
+
+  border: 20px solid #ffffff;
+  border-radius: 6px;
+  background-color: #ffffff;
+
+  overflow: hidden;
+}
+
+.services-list__info-text {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .services-list__list {
@@ -451,7 +558,7 @@ img {
 
 .services-list__img-girl {
   position: absolute;
-  right: -180px;
+  right: 0;
   bottom: 100px;
 
   display: block;
@@ -459,7 +566,100 @@ img {
   height: 760px;
 }
 
-/* ====== Модальное окно "Форма заказа" - начало ====== */
+.services-list__img-wave {
+  position: absolute;
+  left: 50%;
+  bottom: 23px;
+  transform: translateX(-50%);
+
+  display: block;
+  width: 1920px;
+  height: 202px;
+}
+
+.services-list__link-next {
+  position: absolute;
+  bottom: 135px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  border: 3px solid #ef8a91;
+  border-radius: 50%;
+}
+
+.services-list__link-next::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: rotate(40deg);
+  z-index: 1;
+
+  display: block;
+  width: 10px;
+  height: 2px;
+
+  background-color: #989797;
+  pointer-events: none;
+}
+
+.services-list__link-next::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: rotate(-40deg);
+  z-index: 1;
+
+  display: block;
+  width: 10px;
+  height: 2px;
+
+  background-color: #989797;
+  pointer-events: none;
+}
+
+.services-list__link-next:active::before,
+.services-list__link-next:active::after {
+  opacity: 0.5;
+}
+
+.services-list__circle {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  display: block;
+  width: 11px;
+  height: 11px;
+
+  border: 3px solid #ef8a91;
+  border-radius: 50%;
+}
+
+.services-list__circle::before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  display: block;
+  width: 3px;
+  height: 18px;
+
+  background-color: #ef8a91;
+}
+
+/* ====== Модальное окно 'Форма заказа' - начало ====== */
 .form-modal {
   position: relative;
   left: 50%;
@@ -567,7 +767,7 @@ img {
 }
 
 .form-modal__wrapper--select::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   right: 65px;
@@ -584,7 +784,7 @@ img {
 }
 
 .form-modal__wrapper--select::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   right: 58px;
@@ -683,9 +883,9 @@ img {
 .form-modal__img-lern {
   position: absolute;
 }
-/* ======= Модальное окно "Форма заказа" - конец ======= */
+/* ======= Модальное окно 'Форма заказа' - конец ======= */
 
-/* ====== Модальное окно "Заказ принят" - начало ====== */
+/* ====== Модальное окно 'Заказ принят' - начало ====== */
 .sent-modal {
   position: relative;
   left: 50%;
@@ -821,4 +1021,4 @@ img {
   right: 0;
   bottom: 0;
 }
-/* ====== Модальное окно "Заказ принят" - конец ====== */
+/* ====== Модальное окно 'Заказ принят' - конец ====== */
