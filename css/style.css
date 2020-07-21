@@ -1,3 +1,4 @@
+/* ============ Глобальные параметры - начало ============ */
 @font-face {
   font-family: "Myriad Pro";
   font-style: normal;
@@ -39,16 +40,26 @@ body {
   font-family: "Myriad Pro", "Arial", sans-serif;
   font-size: 14px;
   font-style: normal;
-  line-height: 24px;
-  color: black;
+  line-height: 20px;
+  color: #282828;
 
   padding: 0;
   margin: 0;
+
+  background-color: tomato;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 180px;
+  padding-left: 180px;
 }
 
 .visually-hidden {
@@ -63,10 +74,265 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/* =========== Глобальные параметры - конец ============ */
+
+/* =========== Header - начало ============ */
+.page-header {
+  padding-top: 32px;
+  min-height: 240px;
+}
+.page-header__info {
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info__logo {
+  display: block;
+  width: 280px;
+  height: 126px;
+  margin-right: 40px;
+}
+
+.contact-info__description {
+  width: 150px;
+  margin: 0 140px 0 0;
+
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.contact-info__map {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-right: 25px;
+
+  border-radius: 50%;
+}
+
+.contact-info__location {
+  min-width: 210px;
+  margin-right: 65px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.contact-info__title {
+  font-weight: 500;
+}
+
+.contact-info__address {
+  font-weight: 300;
+  font-style: normal;
+}
+
+.contact-info__map-link {
+  border-bottom: 1px dashed #ff6078;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  color: #ff6078;
+}
+
+.contact-info__details {
+  min-width: 260px;
+}
+
+.contact-info__call {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 45px;
+  margin-bottom: 10px;
+}
+
+.contact-info__call::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+  background: #ffffff url("../img/icon-phone.png") no-repeat center;
+}
+
+.contact-info__call-text {
+  position: relative;
+
+  padding-left: 15px;
+
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.contact-info__call-text::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 6px;
+  height: 6px;
+
+  border-radius: 3px;
+  box-shadow: 0 0 4px rgba(79, 160, 55, 0.61);
+  background-color: #27b24b;
+}
+
+.contact-info__phone {
+  font-size: 24px;
+  text-decoration: none;
+  color: #282828;
+}
+
+.contact-info__schedule {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 35px;
+  padding-left: 45px;
+
+  font-size: 16px;
+}
+
+.contact-info__schedule::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+  background: #ffffff url("../img/icon-time.png") no-repeat center;
+}
+
+.contact-info__schedule b {
+  margin-left: 5px;
+
+  font-weight: 500;
+}
+
+.contact-info__sign-up {
+  position: relative;
+
+  display: block;
+  min-width: 230px;
+  min-height: 60px;
+  margin-left: auto;
+  padding: 22px 25px 20px 55px;
+
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: #1f1d1d;
+
+  border-radius: 30px;
+  background-color: #fefcfb;
+  box-shadow: 0 3px 0 #ebeaea;
+}
+
+.contact-info__sign-up:active {
+  box-shadow: inset 0 3px 0 #ebeaea;
+}
+
+.contact-info__sign-up::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+  background: #ffffff url("../img/icon-calendar.png") no-repeat center;
+}
+
+.main-nav__list {
+  position: relative;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 60px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.main-nav__list::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
+  width: 1523px;
+  height: 14px;
+
+  opacity: 0.5;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.main-nav__link {
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #282828;
+
+  cursor: default;
+}
+
+.main-nav__link[href] {
+  font-weight: 300;
+
+  cursor: pointer;
+}
+
+.main-nav__link:active {
+  opacity: 0.5;
+}
+/* =========== Header - конец ============ */
+
+
 
 /* ====== Модальное окно "Форма заказа" - начало ====== */
 .form-modal {
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   /*
   position: fixed;
   top: 50%;
@@ -286,11 +552,13 @@ img {
 .form-modal__img-lern {
   position: absolute;
 }
-/* ====== Модальное окно "Форма заказа" - конец ====== */
+/* ======= Модальное окно "Форма заказа" - конец ======= */
 
 /* ====== Модальное окно "Заказ принят" - начало ====== */
 .sent-modal {
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   /*
   position: fixed;
   top: 50%;
